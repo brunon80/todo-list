@@ -22,7 +22,7 @@ const TodoInput: React.FC = () => {
         dispatch(addTodoAction({
             id: uuid(),
             name: todo,
-            complete: false,
+            isDone: false,
         }))
         setTodo('')
     }

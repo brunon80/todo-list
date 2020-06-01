@@ -17,7 +17,7 @@ function todosReducer(todos: Array<Todo> = [], { type, payload }: Action) {
             return  [...todos, payload]
             
         case TOGGLE_TODO:
-            return todos.map(todo => (todo.id === payload) ? { ...todo,  complete: !todo.complete  }: todo)
+            return todos.map(todo => (todo.id === payload) ? { ...todo,  isDone: !todo.isDone  }: todo)
             
         case DELETE_TODO:
             return todos.filter(todo => todo.id !== payload)

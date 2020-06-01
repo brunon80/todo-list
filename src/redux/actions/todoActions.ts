@@ -3,7 +3,7 @@ import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from './actionTypes'
 export type Todo = {
     id: string,
     name: string,
-    complete: boolean,
+    isDone: boolean,
 }
 
 export const addTodoAction = (todo: Todo) => ({

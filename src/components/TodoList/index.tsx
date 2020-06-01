@@ -30,10 +30,10 @@ const TodoList: React.FC = () => {
             <ListItem onClick={(e) => onToggle(todo.id)} key={todo.id}>
               <div>
                 <Checkbox 
-                  checked={todo.complete}
+                  checked={todo.isDone}
                   onChange={() => null}
                 />
-                <Label checked={todo.complete}>{todo.name}</Label>
+                <Label checked={todo.isDone}>{todo.name}</Label>
               </div>
               <Remove onClick={(e) => onDelete(todo.id)} className="delete-button">-</Remove>
             </ListItem>

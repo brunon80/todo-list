@@ -1,13 +1,16 @@
-import { InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
 import HiddenCheckbox from './HiddenCheckbox'
 import Icon from './Icon'
 
-const StyledCheckbox = styled.div`
+type StyledCheckboxProps = {
+  checked?: boolean
+}
+
+const StyledCheckbox = styled.div<StyledCheckboxProps>`
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: ${(props: InputHTMLAttributes<HTMLInputElement>) => props.checked ? 'salmon' : '#404a6e'};
+  background: ${(props) => props.checked ? 'salmon' : '#404a6e'};
   border-radius: 30px;
   padding: 5px;
   transition: all 100ms;

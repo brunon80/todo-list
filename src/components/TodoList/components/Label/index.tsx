@@ -1,8 +1,11 @@
-import { InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-const Label = styled.span`
-    text-decoration: ${(props: InputHTMLAttributes<HTMLInputElement>) => props.checked ? 'line-through' : 'none'};
+type LabelProps = {
+    checked: boolean;
+}
+
+const Label = styled.span<LabelProps>`
+    text-decoration: ${(props) => props.checked ? 'line-through' : 'none'};
     font-size: 20px;
 `
 

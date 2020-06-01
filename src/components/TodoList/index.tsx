@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleTodoAction, deleteTodoAction, saveTodoAction } from '../../redux/actions/todoActions'
+import { toggleTodoAction, deleteTodoAction } from '../../redux/actions/todoActions'
 import { State } from '../../redux'
 
 import ListContainer from './components/ListContainer'
@@ -17,12 +17,10 @@ const TodoList: React.FC = () => {
 
   function onToggle(id: string) {
     dispatch(toggleTodoAction(id))
-    dispatch(saveTodoAction())
   }
 
   function onDelete(id: string) {
     dispatch(deleteTodoAction(id))
-    dispatch(saveTodoAction())
   }
 
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { v4 as uuid } from 'uuid'
-import { addTodoAction, saveTodoAction } from '../../redux/actions/todoActions'
+import { addTodoAction } from '../../redux/actions/todoActions'
 
 import Form from './components/Form'
 import Input from './components/Input'
@@ -24,7 +24,6 @@ const TodoInput: React.FC = () => {
             name: todo,
             complete: false,
         }))
-        dispatch(saveTodoAction())
         setTodo('')
     }
     return (

@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, TOGGLE_TODO, SAVE_TODO } from './actionTypes'
+import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from './actionTypes'
 
 export type Todo = {
     id: string,
@@ -19,8 +19,4 @@ export const toggleTodoAction = (todoId: string) => ({
 export const deleteTodoAction = (todoId: string) => ({
     type: DELETE_TODO,
     payload: todoId
-})
-
-export const saveTodoAction = () => ({
-    type: SAVE_TODO,
 })
